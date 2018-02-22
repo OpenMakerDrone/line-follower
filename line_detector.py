@@ -95,7 +95,7 @@ class LineDetector:
         #get minimum and maximum x-coordinate from lines
         x_min = self.horizontalRes+1.0
         x_max = -1.0;
-        if(lines != None and len(lines[0]) > 0):
+        if(lines is not None and len(lines[0]) > 0):
             for x1,y1,x2,y2 in lines[0]:
                 x_min = min(x_min, x1, x2)
                 x_max = max(x_max, x1, x2)
